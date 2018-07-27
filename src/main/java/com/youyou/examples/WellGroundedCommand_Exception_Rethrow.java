@@ -3,6 +3,7 @@ package com.youyou.examples;
 import com.youyou.infra.Command;
 
 import java.io.IOException;
+import java.io.PrintStream;
 import java.sql.SQLException;
 
 public class WellGroundedCommand_Exception_Rethrow extends Command {
@@ -11,7 +12,7 @@ public class WellGroundedCommand_Exception_Rethrow extends Command {
     }
 
     @Override
-    public void execute() {
+    public void execute(PrintStream console) {
         try {
             main();
         } catch (IOException | SQLException e) {

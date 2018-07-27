@@ -1,5 +1,7 @@
 package com.youyou.infra;
 
+import java.io.PrintStream;
+
 public abstract class Command {
     private final String key;
 
@@ -18,6 +20,6 @@ public abstract class Command {
         return description;
     }
 
-    public abstract void execute();
+    public abstract void execute(PrintStream console);
 
 }
