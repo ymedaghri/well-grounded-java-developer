@@ -23,7 +23,7 @@ public class WellGroundedCommand_Exception_Rethrow extends Command {
         try {
             doSomethingWhichMightThrowIOException();
             doSomethingElseWhichMightThrowSQLException();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             throw e;
         }
     }
