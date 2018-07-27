@@ -17,7 +17,7 @@ public class Application {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        
+
         DefaultCommandFactory defaultCommandFactory = initializeCommands();
         showWelcomeMessage(defaultCommandFactory);
 
