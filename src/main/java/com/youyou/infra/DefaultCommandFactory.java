@@ -28,6 +28,6 @@ public class DefaultCommandFactory implements CommandFactory {
 
     @Override
     public List<Command> getAvailableCommands() {
-        return directory.entrySet().stream().map(entrySet->entrySet.getValue()).collect(Collectors.toList());
+        return directory.entrySet().stream().map(entrySet -> entrySet.getValue()).collect(Collectors.toList());
     }
 }
