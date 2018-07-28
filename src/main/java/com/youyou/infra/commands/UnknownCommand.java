@@ -11,6 +11,6 @@ public class UnknownCommand extends Command {
 
     @Override
     public void execute(PrintStream console) {
-        System.out.println("Unknown Command, please retype another command.");
+        console.println("Unknown Command, please retype another command.");
     }
 }

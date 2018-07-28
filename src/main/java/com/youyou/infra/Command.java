@@ -22,4 +22,11 @@ public abstract class Command {
 
     public abstract void execute(PrintStream console);
 
+    @Override
+    public String toString() {
+        return "Command{" +
+                "key='" + key + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

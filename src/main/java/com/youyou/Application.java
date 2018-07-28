@@ -6,7 +6,6 @@ import com.youyou.infra.DefaultCommandFactory;
 import com.youyou.infra.commands.HelpCommand;
 import com.youyou.infra.commands.TerminationCommand;
 
-import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
@@ -24,7 +23,7 @@ public class Application {
 
         Command command;
         do {
-            command = defaultCommandFactory.createCommand(in.nextLine());
+            command = defaultCommandFactory.retrieveCommand(in.nextLine());
             clearConsole();
             command.execute(System.out);
         } while (!(command instanceof TerminationCommand));
@@ -40,7 +39,7 @@ public class Application {
         out.println("-------------------------------------");
         out.println("Currently reading the book at page " + READING_PAGE_NUMBER);
         out.println();
-        defaultCommandFactory.createCommand("help").execute(System.out);
+        defaultCommandFactory.retrieveCommand("help").execute(System.out);
     }
 
     private static DefaultCommandFactory initializeCommands() {

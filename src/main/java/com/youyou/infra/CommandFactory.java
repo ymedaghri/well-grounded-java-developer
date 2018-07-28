@@ -3,7 +3,7 @@ package com.youyou.infra;
 import java.util.List;
 
 public interface CommandFactory {
-    Command createCommand(String commandLiteral);
+    Command retrieveCommand(String commandLiteral);
 
     void initializeWith(Command... commands);
 

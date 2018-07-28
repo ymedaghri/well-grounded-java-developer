@@ -13,7 +13,7 @@ public class DefaultCommandFactory implements CommandFactory {
 
 
     @Override
-    public Command createCommand(String commandLiteral) {
+    public Command retrieveCommand(String commandLiteral) {
         if (directory.isEmpty())
             throw new IllegalStateException("Directory is empty, it need to be initialized by adding commands to it.");
         return directory.getOrDefault(commandLiteral, new UnknownCommand());

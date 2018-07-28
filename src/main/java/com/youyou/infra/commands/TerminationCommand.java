@@ -11,6 +11,6 @@ public class TerminationCommand extends Command {
 
     @Override
     public void execute(PrintStream console) {
-        System.out.println("Quitting the application");
+        console.println("Quitting the application");
     }
 }
